@@ -449,25 +449,199 @@
                         </tr>
                     </thead>
                     <tbody>
+                        <tr class="command-category"><td colspan="2">ディレクトリ・ファイル操作</td></tr>
                         <tr>
                             <td><code>cd &lt;dir&gt;</code></td>
-                            <td>ディレクトリを移動する</td>
+                            <td>指定したディレクトリへ移動する</td>
                         </tr>
                         <tr>
-                            <td><code>chmod &lt;mode&gt; &lt;file&gt;</code></td>
-                            <td>ファイルのパーミッションを変更する</td>
-                        </tr>
-                        <tr>
-                            <td><code>grep &lt;pattern&gt; &lt;file&gt;</code></td>
-                            <td>ファイル内からパターンを検索する</td>
-                        </tr>
-                        <tr>
-                            <td><code>ls -la</code></td>
-                            <td>ファイル一覧を詳細表示（隠しファイル含む）</td>
+                            <td><code>ls</code></td>
+                            <td>対象ディレクトリの情報を表示する</td>
                         </tr>
                         <tr>
                             <td><code>pwd</code></td>
-                            <td>現在のディレクトリパスを表示する</td>
+                            <td>現在アクセスしているディレクトリを表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>mkdir &lt;dir&gt;</code></td>
+                            <td>新しいフォルダを作成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>cp &lt;src&gt; &lt;dest&gt;</code></td>
+                            <td>対象のファイルをコピーする</td>
+                        </tr>
+                        <tr>
+                            <td><code>touch &lt;file&gt;</code></td>
+                            <td>ファイルを新規作成、またはタイムスタンプを変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>rmdir &lt;dir&gt;</code></td>
+                            <td>中身にデータが入っていないフォルダを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>rm &lt;file&gt;</code></td>
+                            <td>指定したファイルを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>mv &lt;src&gt; &lt;dest&gt;</code></td>
+                            <td>ファイルの移動や名称変更などを行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>clear</code></td>
+                            <td>端末の画面に表示された内容を消去する</td>
+                        </tr>
+                        <tr>
+                            <td><code>cat &lt;file&gt;</code></td>
+                            <td>テキストファイルの内容を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>chmod &lt;mode&gt; &lt;file&gt;</code></td>
+                            <td>指定したファイルやフォルダの権限を変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>chown &lt;user&gt; &lt;file&gt;</code></td>
+                            <td>指定したファイルやフォルダの所有者情報を変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>tar</code></td>
+                            <td>複数ファイルを圧縮して一つにまとめる、または展開を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>find &lt;path&gt; &lt;cond&gt;</code></td>
+                            <td>対象ファイルを検索する</td>
+                        </tr>
+                        <tr>
+                            <td><code>locate &lt;name&gt;</code></td>
+                            <td>ファイル名やディレクトリ名を指定してファイルを検索する</td>
+                        </tr>
+                        <tr>
+                            <td><code>history</code></td>
+                            <td>これまでに実行したコマンドの履歴を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>ln &lt;target&gt; &lt;link&gt;</code></td>
+                            <td>ファイルやフォルダに対してリンクを作成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>man &lt;command&gt;</code></td>
+                            <td>コマンドの使い方に関するマニュアルを表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>apropos &lt;keyword&gt;</code></td>
+                            <td>キーワードを指定してコマンドを検索する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">ユーザ管理操作</td></tr>
+                        <tr>
+                            <td><code>chfn</code></td>
+                            <td>ユーザに関する情報設定を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>deluser &lt;user&gt;</code></td>
+                            <td>指定したユーザを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>groupadd &lt;group&gt;</code></td>
+                            <td>新たなグループを作成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>groupdel &lt;group&gt;</code></td>
+                            <td>既存のグループを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>id</code></td>
+                            <td>現在のユーザやグループのID情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>su &lt;user&gt;</code></td>
+                            <td>ユーザを切り替える</td>
+                        </tr>
+                        <tr>
+                            <td><code>useradd &lt;user&gt;</code></td>
+                            <td>新たなユーザを作成する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">システム管理操作</td></tr>
+                        <tr>
+                            <td><code>finger &lt;user&gt;</code></td>
+                            <td>ユーザに関する情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>free</code></td>
+                            <td>空き容量と使用容量を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>last</code></td>
+                            <td>ログインに関する履歴情報を表示する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">ネットワーク関連操作</td></tr>
+                        <tr>
+                            <td><code>ftp &lt;host&gt;</code></td>
+                            <td>ファイルのFTP転送を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>ssh &lt;user&gt;@&lt;host&gt;</code></td>
+                            <td>SSHでログインを行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>route</code></td>
+                            <td>ルーティングの設定や表示を行う</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">テキスト処理操作</td></tr>
+                        <tr>
+                            <td><code>cut</code></td>
+                            <td>文字を切り出して表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>diff &lt;file1&gt; &lt;file2&gt;</code></td>
+                            <td>ファイル間の差分を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>grep &lt;pattern&gt; &lt;file&gt;</code></td>
+                            <td>ファイル内に含まれる文字列を検索する</td>
+                        </tr>
+                        <tr>
+                            <td><code>head &lt;file&gt;</code></td>
+                            <td>ファイル内容を先頭から10行まで表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>less &lt;file&gt;</code></td>
+                            <td>ファイル内容をスクロール操作で表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>lv &lt;file&gt;</code></td>
+                            <td>ファイル内容をページごとに表示、または文字コード変換を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>more &lt;file&gt;</code></td>
+                            <td>ファイルの内容をページごとに表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>vi &lt;file&gt;</code></td>
+                            <td>テキストエディタの起動や編集を行う</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">その他</td></tr>
+                        <tr>
+                            <td><code>which &lt;command&gt;</code></td>
+                            <td>指定したコマンドのパスを表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>who</code></td>
+                            <td>ユーザに関する情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>type &lt;command&gt;</code></td>
+                            <td>コマンドの型に関する情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>whatis &lt;command&gt;</code></td>
+                            <td>コマンドの検索と説明の表示を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>cal</code></td>
+                            <td>カレンダーを表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>date</code></td>
+                            <td>日付の表示や設定を行う</td>
                         </tr>
                     </tbody>
                 </table>
