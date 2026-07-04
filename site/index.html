@@ -29,6 +29,11 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.08);
         }
 
+        .home-card-icon {
+            color: #1a1a2e;
+            margin-bottom: 0.75rem;
+        }
+
         .home-card-title {
             font-size: 1.1rem;
             font-weight: 700;
@@ -52,15 +57,20 @@
     <main>
         <div class="home-grid">
             <a class="home-card" href="./tech/index.html">
+                <div class="home-card-icon"><i data-lucide="code-2"></i></div>
                 <p class="home-card-title">Tech</p>
                 <p class="home-card-desc">プログラミング・インフラ・クラウドなど技術系の学習まとめ</p>
             </a>
             <a class="home-card" href="./humanities/index.html">
+                <div class="home-card-icon"><i data-lucide="book-open"></i></div>
                 <p class="home-card-title">人文・教養</p>
                 <p class="home-card-desc">歴史・哲学・民俗学など人文系の学習まとめ</p>
             </a>
         </div>
     </main>
+
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script>lucide.createIcons();</script>
 
     <footer>
         <p>&copy; 2026 My Study Site</p>
