@@ -40,6 +40,44 @@ header nav a:hover {
     color: #fff;
 }
 
+/* Breadcrumb */
+.breadcrumb {
+    width: 100%;
+    background: #f0f0f5;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0.35rem 2rem;
+    font-size: 0.8rem;
+}
+
+.breadcrumb ol {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.4rem;
+    align-items: center;
+}
+
+.breadcrumb li + li::before {
+    content: '/';
+    color: #bbb;
+    margin-right: 0.4rem;
+}
+
+.breadcrumb a {
+    color: #666;
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    color: #1a1a2e;
+    text-decoration: underline;
+}
+
+.breadcrumb li:last-child {
+    color: #333;
+    font-weight: 500;
+}
+
 main {
     max-width: 900px;
     width: 100%;
