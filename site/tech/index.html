@@ -151,32 +151,120 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><code>git add &lt;file&gt;</code></td>
-                            <td>変更をステージングエリアに追加する</td>
-                        </tr>
-                        <tr>
                             <td><code>git clone &lt;url&gt;</code></td>
-                            <td>リモートリポジトリをローカルにコピーする</td>
-                        </tr>
-                        <tr>
-                            <td><code>git commit -m "&lt;msg&gt;"</code></td>
-                            <td>ステージした変更をコミットする</td>
+                            <td>リモートリポジトリのブランチを複製してカレントディレクトリに保存する</td>
                         </tr>
                         <tr>
                             <td><code>git init</code></td>
-                            <td>新しいリポジトリを初期化する</td>
+                            <td>ローカルリポジトリを新規作成する</td>
                         </tr>
                         <tr>
-                            <td><code>git pull</code></td>
-                            <td>リモートの変更を取得してマージする</td>
+                            <td><code>git remote</code></td>
+                            <td>リモートリポジトリの操作を行う</td>
                         </tr>
                         <tr>
-                            <td><code>git push</code></td>
-                            <td>ローカルのコミットをリモートに送信する</td>
+                            <td><code>git remote add &lt;name&gt; &lt;url&gt;</code></td>
+                            <td>ローカルリポジトリにリモートリポジトリを追加する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote rm &lt;name&gt;</code></td>
+                            <td>リモートリポジトリを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote set-url &lt;name&gt; &lt;url&gt;</code></td>
+                            <td>リモートリポジトリのURLを変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote rename &lt;old&gt; &lt;new&gt;</code></td>
+                            <td>リモートリポジトリ名を変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote show &lt;name&gt;</code></td>
+                            <td>リモートリポジトリの詳細情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git branch</code></td>
+                            <td>ローカルリポジトリのブランチを操作する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git checkout &lt;branch&gt;</code></td>
+                            <td>ブランチの作成や切り替え、コミット切り替えを行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>git switch &lt;branch&gt;</code></td>
+                            <td>ブランチの切り替えや作成を行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>git restore &lt;file&gt;</code></td>
+                            <td>ブランチの作業内容を元に戻す</td>
+                        </tr>
+                        <tr>
+                            <td><code>git add &lt;file&gt;</code></td>
+                            <td>ファイルをインデックスに追加する（ステージング）</td>
                         </tr>
                         <tr>
                             <td><code>git status</code></td>
-                            <td>作業ツリーの状態を確認する</td>
+                            <td>ステージングされたファイルの一覧を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git rm &lt;file&gt;</code></td>
+                            <td>削除したファイルを指定してステージングする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "&lt;msg&gt;"</code></td>
+                            <td>インデックスのファイルをリポジトリに記録する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push</code></td>
+                            <td>ローカルリポジトリの変更内容をリモートに送信する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git pull</code></td>
+                            <td>リモートリポジトリの内容を取得して取り込む</td>
+                        </tr>
+                        <tr>
+                            <td><code>git fetch</code></td>
+                            <td>ローカルとリモートリポジトリを同期して変更情報を取得する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git merge &lt;branch&gt;</code></td>
+                            <td>別ブランチのコミットを作業中のブランチにマージする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git cherry-pick &lt;hash&gt;</code></td>
+                            <td>指定したコミットを作業中のブランチにマージする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git rebase &lt;branch&gt;</code></td>
+                            <td>コミットをブランチに適用して再編成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git show &lt;hash&gt;</code></td>
+                            <td>指定したコミットの履歴を参照する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log</code></td>
+                            <td>コミットの履歴と詳細を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git reflog</code></td>
+                            <td>コミットの履歴を表示する（削除分も含む）</td>
+                        </tr>
+                        <tr>
+                            <td><code>git reset</code></td>
+                            <td>インデックスを削除またはコミット前の状態に戻す</td>
+                        </tr>
+                        <tr>
+                            <td><code>git revert &lt;hash&gt;</code></td>
+                            <td>指定したコミットの打ち消しを行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>git stash</code></td>
+                            <td>作業中ブランチの内容を退避する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git diff</code></td>
+                            <td>コミット同士や作業内容の差分を表示する</td>
                         </tr>
                     </tbody>
                 </table>
