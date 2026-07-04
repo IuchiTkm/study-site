@@ -219,6 +219,12 @@ code {
     font-size: 0.9rem;
 }
 
+@media (max-width: 640px) {
+    .category-list {
+        grid-template-columns: 1fr;
+    }
+}
+
 footer {
     position: fixed;
     bottom: 0;
