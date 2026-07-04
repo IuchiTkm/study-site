@@ -1,0 +1,237 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+header nav a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+header nav a:hover {
+    color: #fff;
+}
+
+main {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 1.5rem;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    padding: 0.6rem 1.4rem;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #666;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -2px;
+    transition: color 0.15s, border-color 0.15s;
+}
+
+.tab-btn:hover {
+    color: #333;
+}
+
+.tab-btn.active {
+    color: #1a1a2e;
+    border-bottom-color: #1a1a2e;
+    font-weight: 600;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+/* Category groups */
+.category-group {
+    margin-bottom: 0.5rem;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    background: #fff;
+    overflow: hidden;
+}
+
+.category-group-title {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.65rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #444;
+    cursor: pointer;
+    user-select: none;
+}
+
+.category-group-title::-webkit-details-marker {
+    display: none;
+}
+
+.category-group-title::before {
+    content: '▶';
+    font-size: 0.65rem;
+    color: #aaa;
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.category-group[open] > .category-group-title::before {
+    transform: rotate(90deg);
+}
+
+.category-group[open] > .category-group-title {
+    border-bottom: 1px solid #e8e8e8;
+}
+
+.category-group .category-list {
+    padding: 0.75rem 1rem;
+}
+
+/* Category list */
+.category-list {
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 0.75rem;
+}
+
+.category-list li a {
+    display: block;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 0.75rem 1rem;
+    text-decoration: none;
+    color: #1a1a2e;
+    font-weight: 500;
+    transition: box-shadow 0.15s, border-color 0.15s;
+}
+
+.category-list li a:hover {
+    border-color: #1a1a2e;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+/* Glossary */
+.glossary-list {
+    padding: 0.25rem 1rem 0.75rem;
+}
+
+.glossary-term {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 0.5rem 1.5rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f0f0f0;
+    align-items: baseline;
+}
+
+.glossary-term dt {
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.glossary-term dd {
+    color: #555;
+    font-size: 0.9rem;
+}
+
+/* Commands */
+.command-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid #e0e0e0;
+}
+
+.command-table th {
+    background: #f0f0f5;
+    text-align: left;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+    color: #666;
+    font-weight: 600;
+}
+
+.command-table td {
+    padding: 0.5rem 0.75rem;
+    border-top: 1px solid #f0f0f0;
+    vertical-align: top;
+}
+
+.command-table tr:hover td {
+    background: #fafafa;
+}
+
+code {
+    font-family: 'Consolas', 'Menlo', monospace;
+    background: #f0f0f5;
+    padding: 0.1em 0.35em;
+    border-radius: 3px;
+    font-size: 0.88em;
+    color: #c0392b;
+}
+
+.command-table td code {
+    background: none;
+    padding: 0;
+    color: #1a6eb5;
+    font-size: 0.9rem;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0.75rem;
+    color: #aaa;
+    font-size: 0.85rem;
+    background: #f5f5f5;
+    border-top: 1px solid #e8e8e8;
+}
+
+main {
+    padding-bottom: 3rem;
+}
