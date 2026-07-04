@@ -250,6 +250,16 @@ main {
     background: #fafafa;
 }
 
+.command-table .command-category td {
+    background: #f0f0f5;
+    font-weight: 700;
+    font-size: 0.78rem;
+    color: #555;
+    letter-spacing: 0.04em;
+    padding: 0.3rem 0.75rem;
+    border-top: 1px solid #ddd;
+}
+
 code {
     font-family: 'Consolas', 'Menlo', monospace;
     background: #f0f0f5;

@@ -270,6 +270,176 @@
                 </table>
             </details>
             <details class="category-group">
+                <summary class="category-group-title"><i class="devicon-docker-plain colored"></i>Docker</summary>
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>コマンド</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr class="command-category"><td colspan="2">docker image</td></tr>
+                        <tr>
+                            <td><code>docker image pull &lt;image&gt;</code></td>
+                            <td>dockerhubからイメージを取得する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image ls</code></td>
+                            <td>イメージの一覧を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image rm &lt;image&gt;</code></td>
+                            <td>イメージを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image prune</code></td>
+                            <td>コンテナから参照されていない未使用のイメージを全て削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image inspect &lt;image&gt;</code></td>
+                            <td>イメージの詳細情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image build &lt;path&gt;</code></td>
+                            <td>指定したDockerfileからイメージをビルドする</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker image tag &lt;src&gt; &lt;target&gt;</code></td>
+                            <td>イメージのタグ名を変更する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">docker container</td></tr>
+                        <tr>
+                            <td><code>docker container ls</code></td>
+                            <td>コンテナの一覧を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container rm &lt;container&gt;</code></td>
+                            <td>コンテナを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container prune</code></td>
+                            <td>実行されていないコンテナを全て削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container run &lt;image&gt;</code></td>
+                            <td>新規コンテナをイメージから生成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container start &lt;container&gt;</code></td>
+                            <td>コンテナを起動する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container stop &lt;container&gt;</code></td>
+                            <td>コンテナを停止する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container restart &lt;container&gt;</code></td>
+                            <td>コンテナを再起動する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container exec &lt;container&gt; &lt;cmd&gt;</code></td>
+                            <td>実行中のコンテナに対してコマンドを実行する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container cp &lt;src&gt; &lt;dest&gt;</code></td>
+                            <td>コンテナとローカル間のファイルのコピーを行う</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container logs &lt;container&gt;</code></td>
+                            <td>コンテナのログを表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container stats</code></td>
+                            <td>コンテナのリソース情報を動的に表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container top &lt;container&gt;</code></td>
+                            <td>コンテナのプロセス情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container diff &lt;container&gt;</code></td>
+                            <td>コンテナ内のファイルやディレクトリの変更箇所を確認する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker container inspect &lt;container&gt;</code></td>
+                            <td>コンテナの詳細情報を表示する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">docker network</td></tr>
+                        <tr>
+                            <td><code>docker network create &lt;name&gt;</code></td>
+                            <td>ネットワークを作成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network connect &lt;network&gt; &lt;container&gt;</code></td>
+                            <td>コンテナとネットワークを接続する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network disconnect &lt;network&gt; &lt;container&gt;</code></td>
+                            <td>コンテナとネットワークを切断する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network ls</code></td>
+                            <td>ネットワークの一覧を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network inspect &lt;network&gt;</code></td>
+                            <td>ネットワークの詳細情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network rm &lt;network&gt;</code></td>
+                            <td>ネットワークを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker network prune</code></td>
+                            <td>参照されていないネットワークを削除する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">docker volume</td></tr>
+                        <tr>
+                            <td><code>docker volume create &lt;name&gt;</code></td>
+                            <td>ボリュームを作成する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker volume ls</code></td>
+                            <td>ボリュームの一覧を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker volume inspect &lt;name&gt;</code></td>
+                            <td>ボリュームの詳細情報を表示する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker volume rm &lt;name&gt;</code></td>
+                            <td>ボリュームを削除する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker volume prune</code></td>
+                            <td>参照されていないボリュームを削除する</td>
+                        </tr>
+                        <tr class="command-category"><td colspan="2">その他</td></tr>
+                        <tr>
+                            <td><code>docker search &lt;keyword&gt;</code></td>
+                            <td>dockerhub上のイメージを検索する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker save -o &lt;file&gt; &lt;image&gt;</code></td>
+                            <td>コンテナのベースイメージとレイヤーの情報を全てtarファイルに出力する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker export -o &lt;file&gt; &lt;container&gt;</code></td>
+                            <td>コンテナの最終的な内部構成をtarファイルに出力する</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker load -i &lt;file&gt;</code></td>
+                            <td>saveコマンドで保存したファイルを取り込む</td>
+                        </tr>
+                        <tr>
+                            <td><code>docker import &lt;file&gt;</code></td>
+                            <td>exportで出力したファイルを取り込む</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <details class="category-group">
                 <summary class="category-group-title"><i class="devicon-linux-plain"></i>Linux</summary>
                 <table class="command-table">
                     <thead>
