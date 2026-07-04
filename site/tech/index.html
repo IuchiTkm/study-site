@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech | My Study Site</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Tech</h1>
+        <nav>
+            <a href="../index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="categories">学習カテゴリ</button>
+            <button class="tab-btn" data-tab="glossary">用語集</button>
+            <button class="tab-btn" data-tab="commands">コマンド集</button>
+        </div>
+
+        <!-- 学習カテゴリ -->
+        <div class="tab-content active" id="categories">
+            <details class="category-group">
+                <summary class="category-group-title">プログラミング言語</summary>
+                <ul class="category-list">
+                    <li><a href="./css/index.html">CSS</a></li>
+                    <li><a href="./go/index.html">Go</a></li>
+                    <li><a href="./html/index.html">HTML</a></li>
+                    <li><a href="./javascript/index.html">JavaScript</a></li>
+                </ul>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">データベース</summary>
+                <ul class="category-list">
+                    <li><a href="./sql/index.html">SQL</a></li>
+                </ul>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">インフラ / OS</summary>
+                <ul class="category-list">
+                    <li><a href="./docker/index.html">Docker</a></li>
+                    <li><a href="./kubernetes/index.html">Kubernetes</a></li>
+                    <li><a href="./linux/index.html">Linux</a></li>
+                </ul>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">クラウド</summary>
+                <ul class="category-list">
+                    <li><a href="./aws/index.html">AWS</a></li>
+                    <li><a href="./google-cloud/index.html">Google Cloud</a></li>
+                </ul>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">バージョン管理</summary>
+                <ul class="category-list">
+                    <li><a href="./git/index.html">Git</a></li>
+                </ul>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">品質系</summary>
+                <ul class="category-list">
+                    <li><a href="./readableCode/index.html">リーダブルコード</a></li>
+                </ul>
+            </details>
+        </div>
+
+        <!-- 用語集 -->
+        <div class="tab-content" id="glossary">
+            <details class="category-group">
+                <summary class="category-group-title">Git</summary>
+                <dl class="glossary-list">
+                    <div class="glossary-term">
+                        <dt>コミット</dt>
+                        <dd>変更内容をリポジトリに記録するスナップショット。</dd>
+                    </div>
+                    <div class="glossary-term">
+                        <dt>ブランチ</dt>
+                        <dd>コミット履歴の分岐。機能開発や修正を独立して進めるために使う。</dd>
+                    </div>
+                    <div class="glossary-term">
+                        <dt>リポジトリ</dt>
+                        <dd>変更履歴を管理するためのデータの保管場所。</dd>
+                    </div>
+                </dl>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">Linux</summary>
+                <dl class="glossary-list">
+                    <div class="glossary-term">
+                        <dt>パーミッション</dt>
+                        <dd>ファイルやディレクトリに対する読み・書き・実行の権限設定。</dd>
+                    </div>
+                    <div class="glossary-term">
+                        <dt>プロセス</dt>
+                        <dd>実行中のプログラムの単位。PID（プロセスID）で識別される。</dd>
+                    </div>
+                </dl>
+            </details>
+        </div>
+
+        <!-- コマンド集 -->
+        <div class="tab-content" id="commands">
+            <details class="category-group">
+                <summary class="category-group-title">Git</summary>
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>コマンド</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>git add &lt;file&gt;</code></td>
+                            <td>変更をステージングエリアに追加する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git clone &lt;url&gt;</code></td>
+                            <td>リモートリポジトリをローカルにコピーする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git commit -m "&lt;msg&gt;"</code></td>
+                            <td>ステージした変更をコミットする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git init</code></td>
+                            <td>新しいリポジトリを初期化する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git pull</code></td>
+                            <td>リモートの変更を取得してマージする</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push</code></td>
+                            <td>ローカルのコミットをリモートに送信する</td>
+                        </tr>
+                        <tr>
+                            <td><code>git status</code></td>
+                            <td>作業ツリーの状態を確認する</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+            <details class="category-group">
+                <summary class="category-group-title">Linux</summary>
+                <table class="command-table">
+                    <thead>
+                        <tr>
+                            <th>コマンド</th>
+                            <th>説明</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>cd &lt;dir&gt;</code></td>
+                            <td>ディレクトリを移動する</td>
+                        </tr>
+                        <tr>
+                            <td><code>chmod &lt;mode&gt; &lt;file&gt;</code></td>
+                            <td>ファイルのパーミッションを変更する</td>
+                        </tr>
+                        <tr>
+                            <td><code>grep &lt;pattern&gt; &lt;file&gt;</code></td>
+                            <td>ファイル内からパターンを検索する</td>
+                        </tr>
+                        <tr>
+                            <td><code>ls -la</code></td>
+                            <td>ファイル一覧を詳細表示（隠しファイル含む）</td>
+                        </tr>
+                        <tr>
+                            <td><code>pwd</code></td>
+                            <td>現在のディレクトリパスを表示する</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </details>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Study Site</p>
+    </footer>
+
+    <script>
+        const buttons = document.querySelectorAll('.tab-btn');
+        const contents = document.querySelectorAll('.tab-content');
+
+        buttons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                buttons.forEach(b => b.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                btn.classList.add('active');
+                document.getElementById(btn.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
+
+</body>
+</html>
