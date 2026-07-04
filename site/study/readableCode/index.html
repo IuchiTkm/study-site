@@ -125,6 +125,54 @@
             margin-bottom: 1.5rem;
         }
 
+        .layout {
+            display: grid;
+            grid-template-columns: 1fr 200px;
+            gap: 1.5rem;
+            align-items: start;
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 1rem;
+        }
+
+        .ref-links {
+            background: #fff;
+            border: 1px solid #e8e8e8;
+            border-radius: 6px;
+            padding: 0.75rem 1rem;
+        }
+
+        .ref-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-top: 0.4rem;
+        }
+
+        .ref-list a {
+            font-size: 0.85rem;
+            color: #1a6eb5;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        .ref-list a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 640px) {
+            .layout {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: static;
+            }
+        }
+
         .source {
             font-size: 0.78rem;
             color: #aaa;
@@ -144,7 +192,10 @@
     <main>
         <p class="book-meta">Dustin Boswell, Trevor Foucher 著 / 角 征典 訳</p>
 
-        <details class="chapter" id="notes">
+        <div class="layout">
+            <div class="main-content">
+
+                <details class="chapter" id="notes">
             <summary class="chapter-title">気づき・印象に残った言い回し</summary>
             <div class="chapter-body">
                 <ul class="point-list">
@@ -411,7 +462,20 @@
                     </div>
                 </div>
             </details>
-        </div>
+            </div><!-- /.part-group -->
+
+            </div><!-- /.main-content -->
+
+            <aside class="sidebar">
+                <div class="ref-links">
+                    <p class="section-label">参考リンク</p>
+                    <ul class="ref-list">
+                        <li><a href="https://www.amazon.co.jp/dp/4873115655" target="_blank" rel="noopener">Amazon — リーダブルコード</a></li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div><!-- /.layout -->
     </main>
 
     <footer>
